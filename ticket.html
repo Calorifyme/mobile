@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-fitness-addiction-flaticons-lineal-color-flat-icons.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#0d0c16">
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Clfy.com - NewsFeed</title>
+    <style>
+        /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: right;
+    width: 100%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+    </style>
+</head>
+<body style="overflow: hidden;height: 80vh;position: fixed;width: 100%;">
+    <div class="laptop">
+        <img src="https://img.icons8.com/external-others-pike-picture/50/000000/external-Page-Not-Found-not-found-others-pike-picture.png"/>
+        Not Available on Desktop!
+    </div>
+
+    <div class="mobile" style="overflow: hidden;height: 87vh;display: grid;place-items: center;justify-items: center;">
+        <div class="nav" style="top: 0px;">
+            <div class="center">
+            <img src="https://img.icons8.com/ios-glyphs/16/ffffff/lock--v1.png"/>
+            https://m.calorify.me/
+            <select name="pageid" style="width: auto;" id="pageid" onchange="window.location.href=this.options [this.selectedIndex].value">
+              <option value="index.html">NewsFeed</option>
+                <option value="index.html" disabled>🔒Home</option>
+                <option value="caloriefinder.html" disabled>🔒CalorieFinder</option>
+                <option value="profile.html" disabled>🔒Profile</option>
+                <option value="priceplans.html" disabled>🔒PricePlans</option>
+              </select>
+            </div>
+        </div>
+
+        <br><br><br>
+        
+        <div class="ads card" style="height: 630px;line-height: 10px;background-color:#0d0c16;color: white; ">
+            <br>
+            <div class="ch-hd">Chat support</div>
+            <br>
+            <hr>
+            <form id="submit-form" action="">
+                <label for="name">Name<a style="color: red; font-size: 12px;">*</a></label>
+                <input type="text" id="name" name="name" placeholder="" required >
+                <label for="email">Email<a style="color: red; font-size: 12px;">*</a></label>
+                <input type="text" id="email" name="email" placeholder="" required>
+                <label for="country">What kind of trouble are facing?<a style="color: red; font-size: 12px;">*</a></label>
+                <input type="text" id="country" name="color" placeholder="" required>
+                <label for="subject">Please Explain<a style="color: red; font-size: 12px;">*</a></label>
+                <textarea id="message" name="message" placeholder="" style="height:170px" required></textarea>
+                <h5 style="color: red;">*all the input fields are reqired to be filled.</h5>
+                <h5>We will update you through Email😊</h5>
+                <hr>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+        </div>
+
+
+
+
+
+        <!--script-->
+        <script>
+            $("#submit-form").submit((e)=>{
+                e.preventDefault()
+                $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbx11wflBSqtXl446HY0kOLvwkxKVYFlJN2HsLV51ncJq-P3KvpXw0qlxwvzBdgQRttRiQ/exec",
+                    data:$("#submit-form").serialize(),
+                    method:"post",
+                    success:function (response){
+                        alert("Form submitted successfully")
+                        window.location.reload()
+                        //window.location.href="https://google.com"
+                    },
+                    error:function (err){
+                        alert("Something Error")
+        
+                    }
+                })
+            })
+            </script>
+
+
+        <!--footer-->
+<div class="footer" style="bottom: 0px;margin: -15px;">
+    <div class="center">
+        <h5>© Calorify.me 2022 || All Right Reserved</h5>
+    </div>
+</div>
+</body>
+</html>

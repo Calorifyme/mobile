@@ -7,7 +7,9 @@
     <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-fitness-addiction-flaticons-lineal-color-flat-icons.png">
     <link rel="stylesheet" href="style.css">
     <meta name="theme-color" content="#0d0c16">
-    <script src="script.js"></script>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Clfy.com - NewsFeed</title>
 </head>
 <body>
@@ -179,7 +181,7 @@
                 </div>
             </div>
             <br>
-            <div class="ads card" style="height: 680px;">
+            <div class="ads card" style="height: 690px;">
                 <div class="ch-hd">Forming a Muscle-Building Routine</div>
                 <img src="thumb1.png" alt="{thumbnail}" id="thumbnail">
                 <div class="ch-bd">
@@ -191,13 +193,23 @@
                     <p> 6) Consider buying some basic home-gym equipment if you're serious about working out.</p>
                 </div>
             </div>
+            <input type="text" value="Visit this website to achieve your dream body: https://calorifyme.github.io/mobile/" id="myInput" style="display: none;">
 
 
-            
-
+    <button class="open btn" id="btn" onclick="myFunction()"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/share--v1.png"/></button>
+<div class="hide" id="myHide">   
+<div id="myDIV">   
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/sharer.php?u=https://calorifyme.github.io/mobile/" class="fa fa-facebook"></a>
+<a href="https://twitter.com/share?url=https://calorifyme.github.io/mobile/&text=Visit this website to achieve your dream body: " class="fa fa-twitter"></a>
+<a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site to achieve your dream body:- https://calorifyme.github.io/mobile/."
+   title="Share by Email" class="fa fa-envelope"></a>
+<a href="https://api.whatsapp.com/send?text=Visit this website to achieve your dream body: https://calorifyme.github.io/mobile/" class="fa fa-whatsapp"></a>
+</div>
+</div>
 
     </div>
-
+<!--slide script-->
     <script>
         let slideIndex = 1;
         showSlides(slideIndex);
@@ -229,7 +241,17 @@
         }
         </script>
 
-
+<!--hide and show script -->
+<script>
+  function myFunction() {
+    var x = document.getElementById("myHide");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
 
 <div class="footer">
     <div class="center">
